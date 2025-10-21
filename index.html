@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEURO - Onde sua marca se torna única</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sans': ['Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            'dark': '#1a1a1a',
+            'darker': '#0f0f0f',
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --marquee-duration: 28s; }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-track { 
+      will-change: transform;
+      /* Esconder scrollbar em todos os navegadores */
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE/Edge */
+    }
+    .marquee-track::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera */
+    }
+    .marquee-track:hover { animation-play-state: paused; }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-white via-gray-100 to-[#f5e9da] text-gray-900 font-sans">
+  <header class="relative overflow-hidden bg-[#0f1012] border-b border-black/40 min-h-[200px] md:min-h-[220px] lg:min-h-[240px] xl:min-h-[260px] flex items-center">
+          <!-- textura sutil (scanlines) -->
+          <div class="absolute inset-0 opacity-30 pointer-events-none [background:repeating-linear-gradient(180deg,rgba(255,255,255,0.06)_0px,rgba(255,255,255,0.06)_1px,transparent_1px,transparent_3px)]"></div>
+          <!-- efeito de luz radial do centro - mais forte e expandido -->
+          <div class="absolute inset-0 pointer-events-none [background:radial-gradient(ellipse_140%_90%_at_center,rgba(255,255,255,0.18)_0%,rgba(255,255,255,0.10)_30%,rgba(255,255,255,0.05)_60%,transparent_90%)]"></div>
+          <!-- vinheta para bordas mais escuras -->
+          <div class="absolute inset-0 pointer-events-none [background:radial-gradient(ellipse_at_center,transparent_45%,rgba(0,0,0,0.65)_100%)]"></div>
+
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="flex flex-col items-center text-center">
+  <img src="images/logo.png" alt="NEURO MARCA" class="h-64 md:h-72 lg:h-88 xl:h-96 2xl:h-[26rem] w-auto drop-shadow-[0_10px_26px_rgba(0,0,0,0.7)] select-none mt-4 md:mt-0 md:mb-4 lg:mb-6 xl:mb-8 2xl:mb-10" draggable="false" />
+  <p class="-mt-[7.75rem] sm:-mt-[8.5rem] md:-mt-[9rem] lg:-mt-[7.5rem] xl:-mt-[8rem] 2xl:-mt-[8.5rem] mb-12 md:mb-1 lg:mb-2 text-gray-300 tracking-[0.18em] text-base sm:text-lg md:text-xl lg:text-2xl leading-none">
+                      Deixe sua marca no mundo
+                  </p>
+              </div>
+          </div>
+      </header>
+
+  <!-- Faixa branca divisória abaixo do header, como no print -->
+  <div class="w-full h-[14px] md:h-[16px] bg-white"></div>
+
+  <!-- Hero: Três Banners lado a lado -->
+  <section id="banners" class="bg-white py-4 md:py-6">
+    <div class="max-w-6xl mx-auto px-3 md:px-4">
+      <div class="grid grid-cols-3 gap-x-3 md:gap-x-4">
+        <!-- Banner 1: CÓDIGO -->
+        <a href="pdfs/banner1.pdf" target="_blank" rel="noopener noreferrer" class="group relative aspect-[3/4] bg-center bg-cover rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300" style="background-image: url('images/mentoria.jpg');">
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+          <span class="absolute top-0 left-0 text-white text-[10px] md:text-xs font-medium px-2 py-1 shadow-lg opacity-90 group-hover:opacity-100 transition-all select-none pointer-events-none">Saiba mais</span>
+        </a>
+
+        <!-- Banner 2: MENTORIA -->
+        <a href="pdfs/banner2.pdf" target="_blank" rel="noopener noreferrer" class="group relative aspect-[3/4] bg-center bg-cover rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-300" style="background-image: url('images/palestras.jpg');">
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+          <span class="absolute top-0 left-0 text-white text-[10px] md:text-xs font-medium px-2 py-1 shadow-lg opacity-90 group-hover:opacity-100 transition-all select-none pointer-events-none">Saiba mais</span>
+        </a>
+
+        <!-- Banner 3: AGÊNCIA -->
+        <a href="pdfs/banner3.pdf" target="_blank" rel="noopener noreferrer" class="group relative aspect-[3/4] bg-center bg-cover rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-300" style="background-image: url('images/lubeauty.JPG');">
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+          <span class="absolute top-0 left-0 text-white text-[10px] md:text-xs font-medium px-2 py-1 shadow-lg opacity-90 group-hover:opacity-100 transition-all select-none pointer-events-none">Saiba mais</span>
+        </a>
+      </div>
+    </div>
+
+  <script>
+    // Carrossel: drag/swipe + looping infinito + autoplay contínuo
+    let marquee;
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
+    let autoPlay = true;
+    let rafId = null;
+    let speed = 0.15; // px/frame (suave)
+    let scrollRemainder = 0; // acumulador de fração
+  let halfWidth = 0;
+  let isNormalizing = false;
+
+    function recalcHalf() {
+      if (!marquee) return;
+      halfWidth = marquee.scrollWidth / 2; // metade do conteúdo (itens duplicados)
+    }
+
+    function normalizeScroll() {
+      if (!marquee || isNormalizing || isDown) return;
+      isNormalizing = true;
+      let s = marquee.scrollLeft;
+      const w = halfWidth;
+      if (w > 0 && (s >= w || s < 0)) {
+        // preserva o overshoot com módulo, inclusive negativos
+        s = ((s % w) + w) % w;
+        marquee.scrollLeft = s;
+      }
+      isNormalizing = false;
+    }
+
+    function startAuto() {
+      if (rafId) return;
+      const step = () => {
+        if (autoPlay && !isDown && marquee) {
+          scrollRemainder += speed;
+          if (Math.abs(scrollRemainder) >= 1) {
+            const move = Math.trunc(scrollRemainder);
+            marquee.scrollLeft += move;
+            scrollRemainder -= move;
+          }
+          normalizeScroll();
+        }
+        rafId = requestAnimationFrame(step);
+      };
+      rafId = requestAnimationFrame(step);
+    }
+
+    function stopAuto() {
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
+    }
+
+    function setupCarousel() {
+      marquee = document.querySelector('.marquee-track');
+      if (!marquee) return;
+
+      // limpar listeners antigos clonando o node
+      const clone = marquee.cloneNode(true);
+      marquee.parentNode.replaceChild(clone, marquee);
+      marquee = clone;
+
+  // calcular metade e posicionar no meio para minimizar wraps visíveis
+  recalcHalf();
+  marquee.scrollLeft = halfWidth;
+      scrollRemainder = 0;
+
+      // normalização contínua (sem salto visível)
+      marquee.addEventListener('scroll', normalizeScroll);
+
+      // Drag desktop
+      marquee.addEventListener('mousedown', (e) => {
+        isDown = true;
+        marquee.classList.add('cursor-grabbing');
+        startX = e.pageX - marquee.offsetLeft;
+        scrollLeft = marquee.scrollLeft;
+        autoPlay = false;
+      });
+      window.addEventListener('mouseup', () => {
+        if (!isDown) return;
+        isDown = false;
+        marquee.classList.remove('cursor-grabbing');
+        setTimeout(() => { autoPlay = true; }, 150);
+      });
+      marquee.addEventListener('mouseleave', () => {
+        isDown = false;
+        marquee.classList.remove('cursor-grabbing');
+      });
+      marquee.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - marquee.offsetLeft;
+        const walk = (x - startX) * 1.2;
+        marquee.scrollLeft = scrollLeft - walk;
+      });
+
+      // Touch mobile - melhorado para mobile first
+      marquee.addEventListener('touchstart', (e) => {
+        isDown = true;
+        startX = e.touches[0].pageX;
+        scrollLeft = marquee.scrollLeft;
+        autoPlay = false;
+        marquee.style.scrollBehavior = 'auto';
+      }, { passive: true });
+      
+      marquee.addEventListener('touchend', (e) => {
+        isDown = false;
+        marquee.style.scrollBehavior = 'smooth';
+        setTimeout(() => { autoPlay = true; }, 300);
+      }, { passive: true });
+      
+      marquee.addEventListener('touchmove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.touches[0].pageX;
+        const walk = (startX - x) * 1.5; // Aumentado para mobile
+        marquee.scrollLeft = scrollLeft + walk;
+      }, { passive: false });
+
+      // Pausar no hover (desktop)
+      marquee.addEventListener('mouseenter', () => { autoPlay = false; });
+      marquee.addEventListener('mouseleave', () => { autoPlay = true; });
+
+      // Recalcular após imagens carregarem e no resize
+      const imgs = marquee.querySelectorAll('img');
+      let pending = imgs.length;
+      if (pending) {
+        imgs.forEach(img => {
+          if (img.complete) {
+            pending--;
+          } else {
+            img.addEventListener('load', () => {
+              pending--;
+              if (pending === 0) { recalcHalf(); marquee.scrollLeft = halfWidth; scrollRemainder = 0; }
+            });
+          }
+        });
+        if (pending === 0) { recalcHalf(); marquee.scrollLeft = halfWidth; scrollRemainder = 0; }
+      } else {
+        recalcHalf();
+        marquee.scrollLeft = halfWidth;
+        scrollRemainder = 0;
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      setupCarousel();
+      startAuto();
+    });
+    window.addEventListener('resize', () => {
+      recalcHalf();
+    });
+  </script>
+  </section>
+
+    
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="bg-white">
+    <!-- Faixa branca com o título centralizado (como no print) -->
+    <div class="w-full py-5">
+      <h2 class="text-center tracking-[0.35em] text-sm font-medium">PORTFÓLIO</h2>
+    </div>
+    <!-- Galeria em fundo preto -->
+    <div class="relative w-full bg-black py-5">
+      <!-- Barras laterais escuras sugerindo margens (opcional) -->
+      <div class="absolute inset-y-0 left-0 w-3 bg-neutral-900/90"></div>
+      <div class="absolute inset-y-0 right-0 w-3 bg-neutral-900/90"></div>
+
+      <div class="container mx-auto px-2 md:px-4 max-w-6xl relative z-10">
+        <div class="overflow-hidden">
+          <div class="marquee-track flex flex-nowrap items-stretch gap-2 md:gap-3 overflow-x-auto cursor-grab select-none touch-pan-x">
+            <!-- bloco 1/4 -->
+            <a href="https://lumoraesbeauty.com.br/" target="_blank" rel="noopener noreferrer" class="group shrink-0 w-28 sm:w-32 md:w-36 lg:w-40 xl:w-44 aspect-[3/4] bg-black overflow-hidden block rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition-shadow hover:shadow-lg cursor-pointer relative">
+              <img src="images/lubeauty.JPG" alt="Lubeauty" class="w-full h-full object-cover object-center bg-black" />
+              <div class="absolute inset-0 bg-black/30 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 flex flex-col items-center justify-center transition-opacity">
+                <span class="text-white text-2xl mb-1">🔗</span>
+                <span class="text-white text-xs tracking-wide">Ver mais</span>
+              </div>
+            </a>
+              <a href="https://adriano.com.br" target="_blank" rel="noopener noreferrer" class="group shrink-0 w-28 sm:w-32 md:w-36 lg:w-40 xl:w-44 aspect-[3/4] bg-black overflow-hidden block rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition-shadow hover:shadow-lg cursor-pointer relative">
+                  <img src="images/adriano.jpg" alt="Adriano" class="w-full h-full object-cover object-center bg-black" />
+                  <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center transition-opacity">
+                    <span class="text-white text-2xl mb-1">🔗</span>
+                    <span class="text-white text-xs tracking-wide">Ver mais</span>
+                  </div>
+              </a>
+            <a href="https://luciana.com.br" target="_blank" rel="noopener noreferrer" class="group shrink-0 w-28 sm:w-32 md:w-36 lg:w-40 xl:w-44 aspect-[3/4] bg-black overflow-hidden block rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition-shadow hover:shadow-lg cursor-pointer relative">
+              <img src="images/luciana.jpeg" alt="Luciana" class="w-full h-full object-cover object-center bg-black" />
+              <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center transition-opacity">
+                <span class="text-white text-2xl mb-1">🔗</span>
+                <span class="text-white text-xs tracking-wide">Ver mais</span>
+              </div>
+            </a>
+            <a href="https://paulo.com.br" target="_blank" rel="noopener noreferrer" class="group shrink-0 w-28 sm:w-32 md:w-36 lg:w-40 xl:w-44 aspect-[3/4] bg-black overflow-hidden block rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition-shadow hover:shadow-lg cursor-pointer relative">
+              <img src="images/paulo.jpeg" alt="Paulo" class="w-full h-full object-cover object-center bg-black" />
+              <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center transition-opacity">
+                <span class="text-white text-2xl mb-1">🔗</span>
+                <span class="text-white text-xs tracking-wide">Ver mais</span>
+              </div>
+            </a>
+
+            <!-- duplicação para loop contínuo (itens clicáveis) -->
+            <a href="https://lumoraesbeauty.com.br/" target="_blank" rel="noopener noreferrer" class="group shrink-0 w-28 sm:w-32 md:w-36 lg:w-40 xl:w-44 aspect-[3/4] bg-black overflow-hidden block rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition-shadow hover:shadow-lg cursor-pointer relative">
+              <img src="images/lubeauty.JPG" alt="Lubeauty" class="w-full h-full object-cover object-center bg-black" />
+              <div class="absolute inset-0 bg-black/30 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 flex flex-col items-center justify-center transition-opacity">
+                <span class="text-white text-2xl mb-1">🔗</span>
+                <span class="text-white text-xs tracking-wide">Ver mais</span>
+              </div>
+            </a>
+            <a href="https://adriano.com.br" target="_blank" rel="noopener noreferrer" class="group shrink-0 w-28 sm:w-32 md:w-36 lg:w-40 xl:w-44 aspect-[3/4] bg-black overflow-hidden block rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition-shadow hover:shadow-lg cursor-pointer relative">
+              <img src="images/adriano.jpg" alt="Adriano" class="w-full h-full object-cover object-center bg-black" />
+              <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center transition-opacity">
+                <span class="text-white text-2xl mb-1">🔗</span>
+                <span class="text-white text-xs tracking-wide">Ver mais</span>
+              </div>
+            </a>
+            <a href="https://luciana.com.br" target="_blank" rel="noopener noreferrer" class="group shrink-0 w-28 sm:w-32 md:w-36 lg:w-40 xl:w-44 aspect-[3/4] bg-black overflow-hidden block rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition-shadow hover:shadow-lg cursor-pointer relative">
+              <img src="images/luciana.jpeg" alt="Luciana" class="w-full h-full object-cover object-center bg-black" />
+              <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center transition-opacity">
+                <span class="text-white text-2xl mb-1">🔗</span>
+                <span class="text-white text-xs tracking-wide">Ver mais</span>
+              </div>
+            </a>
+            <a href="https://paulo.com.br" target="_blank" rel="noopener noreferrer" class="group shrink-0 w-28 sm:w-32 md:w-36 lg:w-40 xl:w-44 aspect-[3/4] bg-black overflow-hidden block rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition-shadow hover:shadow-lg cursor-pointer relative">
+              <img src="images/paulo.jpeg" alt="Paulo" class="w-full h-full object-cover object-center bg-black" />
+              <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center transition-opacity">
+                <span class="text-white text-2xl mb-1">🔗</span>
+                <span class="text-white text-xs tracking-wide">Ver mais</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="sobre" class="py-8 md:py-16 bg-white">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <!-- Mobile First: Flex row (lado a lado) -->
+      <div class="flex flex-row md:grid md:grid-cols-2 gap-4 md:gap-12 items-start md:items-center">
+        <!-- Imagem: grande no mobile como no print -->
+        <div class="w-[45%] md:w-full flex-shrink-0 flex justify-center items-center">
+          <img src="images/sobre.jpg" 
+               onerror="this.src='https://dummyimage.com/600x400/374151/9ca3af?text=About+Image'" 
+               alt="About us" 
+               class="w-32 h-48 md:w-full md:h-auto object-cover md:object-contain rounded-lg mx-auto mt-8 md:mt-0">
+        </div>
+        <!-- Texto: proporção do print no mobile -->
+        <div class="w-[55%] md:w-full">
+          <h2 class="text-lg md:text-3xl font-bold mb-3 md:mb-6 tracking-wider text-gray-900">SOBRE</h2>
+          <p class="text-gray-700 text-sm md:text-base leading-relaxed mb-3 md:mb-6">
+            Criado por Mary Siqueira, especialista em neurociência e posicionamento estratégico, o Neuro Marcas é um método que une ciência e emoção para construir marcas com propósito, valor e conexão.
+          </p>
+          <p class="text-gray-700 text-sm md:text-base leading-relaxed">
+            Voltado para profissionais e empresas que desejam fortalecer sua identidade e despertar confiança na mente do cliente.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="relative overflow-hidden bg-[#0f1012] text-white py-14">
+    <!-- linha de brilho superior -->
+    <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-60"></div>
+    <!-- textura sutil -->
+    <div class="absolute inset-0 opacity-25 pointer-events-none [background:repeating-linear-gradient(180deg,rgba(255,255,255,0.08)_0px,rgba(255,255,255,0.08)_1px,transparent_1px,transparent_3px)]"></div>
+    
+    <div class="relative z-10 container mx-auto px-4 max-w-6xl">
+      <div class="flex flex-col items-center text-center">
+        <img src="images/logo2.png" alt="NEURO" class="h-10 md:h-12 w-auto mb-3 select-none" draggable="false"/>
+        <p class="text-xs md:text-sm tracking-[0.35em] text-gray-300">ONDE SUA MARCA SE TORNA ÚNICA</p>
+
+        <!-- sociais -->
+        <div class="mt-6 flex items-center gap-4">
+          <a href="#" aria-label="Instagram" class="group">
+            <span class="sr-only">Instagram</span>
+            <div class="w-10 h-10 rounded-full bg-white/10 group-hover:bg-white/20 transition grid place-items-center border border-white/10">
+              <svg viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="currentColor"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2.2a2.8 2.8 0 110 5.6 2.8 2.8 0 010-5.6zM17.8 6.2a1 1 0 100 2 1 1 0 000-2z"/></svg>
+            </div>
+          </a>
+          <a href="#" aria-label="WhatsApp" class="group">
+            <span class="sr-only">WhatsApp</span>
+            <div class="w-10 h-10 rounded-full bg-white/10 group-hover:bg-white/20 transition grid place-items-center border border-white/10">
+              <svg viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="currentColor"><path d="M12.04 2C6.57 2 2.12 6.45 2.12 11.92c0 2.1.61 4.05 1.67 5.7L2 22l4.55-1.75c1.6 1 3.5 1.58 5.49 1.58 5.47 0 9.92-4.45 9.92-9.92S17.51 2 12.04 2zm0 17.8c-1.7 0-3.28-.5-4.6-1.37l-.33-.2-2.7 1.04 1.01-2.62-.22-.34a8.04 8.04 0 01-1.33-4.4c0-4.43 3.6-8.03 8.03-8.03 4.43 0 8.03 3.6 8.03 8.03s-3.6 8.03-8.03 8.03z"/><path d="M16.67 14.4c-.27-.14-1.6-.78-1.85-.87-.25-.09-.43-.14-.6.14-.18.27-.69.86-.85 1.04-.16.18-.31.2-.58.07-.27-.14-1.12-.41-2.14-1.32-.79-.7-1.33-1.57-1.49-1.83-.16-.27-.02-.41.12-.55.12-.12.27-.31.4-.47.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.6-1.44-.82-1.98-.22-.53-.44-.46-.6-.47l-.51-.01c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.3 0 1.36.99 2.67 1.13 2.85.14.18 1.95 2.98 4.72 4.06.66.29 1.18.46 1.58.59.66.21 1.26.18 1.74.11.53-.08 1.6-.65 1.83-1.27.23-.62.23-1.16.16-1.27-.07-.11-.25-.18-.52-.31z"/></svg>
+            </div>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="group">
+            <span class="sr-only">LinkedIn</span>
+            <div class="w-10 h-10 rounded-full bg-white/10 group-hover:bg-white/20 transition grid place-items-center border border-white/10">
+              <svg viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="currentColor"><path d="M6.94 6.5a2.19 2.19 0 11-4.38 0 2.19 2.19 0 014.38 0zM2.97 8.62h3.59V21H2.97V8.62zM9.08 8.62h3.44v1.69h.05c.48-.92 1.64-1.89 3.37-1.89 3.6 0 4.26 2.37 4.26 5.44V21h-3.74v-5.58c0-1.33-.02-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95V21H9.08V8.62z"/></svg>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
